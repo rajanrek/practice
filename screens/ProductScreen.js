@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {Text, View} from 'react-native';
+import {useSelector} from 'react-redux';
 
 function ProductScreen({navigation, route}) {
-  const cardId = route.params.id;
+  const dummy = useSelector(state => state.dummy);
   return (
     <View>
-      <Text>products : {cardId}</Text>
+      <Text>City :{dummy.textIndummy}</Text>
     </View>
   );
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import {View, Text, StyleSheet, Image, Button} from 'react-native';
 
 const Card = ({id, title, des, image, onPress, navigation}) => {
-  console.log('image', image);
   return (
     <View style={styles.cardContainer}>
       <View style={styles.cardImagewrap}>
@@ -17,7 +16,7 @@ const Card = ({id, title, des, image, onPress, navigation}) => {
         <Button
           title="View city"
           onPress={() => {
-            onPress(id);
+            onPress(title);
           }}
         />
       </View>
